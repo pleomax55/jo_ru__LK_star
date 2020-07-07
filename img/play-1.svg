@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 11</title>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-Main" transform="translate(-228.000000, -4370.000000)">
+            <g id="Group-8" transform="translate(228.000000, 4370.000000)">
+                <g id="Group">
+                    <g id="Group-11">
+                        <rect id="Rectangle" fill="#FFC240" x="0" y="0" width="86" height="86" rx="12"></rect>
+                        <path d="M65.3890226,38.5766853 L33.1701254,16.6947851 C31.9877331,15.8939925 30.4180945,15.7733912 29.1221101,16.3956939 C27.815799,17.0131726 27,18.2674261 27,19.6229847 L27,63.3723129 C27,64.7423436 27.815799,65.9917731 29.1221101,66.6092518 C29.6745815,66.8697506 30.2786859,67 30.8879535,67 C31.6830993,67 32.4885718,66.7636214 33.1701254,66.2956884 L65.3890226,44.4330845 C66.4061897,43.7335969 67,42.6530093 67,41.5048849 C67.0051307,40.3374643 66.3958631,39.2617007 65.3890226,38.5766853 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

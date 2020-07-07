@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button-2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-Personal-card" transform="translate(-145.000000, -91.000000)" fill="#262B32" fill-rule="nonzero">
+            <g id="Personal-card">
+                <g id="play-button-2" transform="translate(145.000000, 91.000000)">
+                    <path d="M21.4018378,11.5026486 L0.907459459,0.113351351 C0.670864865,-0.0203783784 0.467567568,-0.0357297297 0.297837838,0.0671351351 C0.128108108,0.169945946 0.0433513514,0.355135135 0.0433513514,0.622594595 L0.0433513514,23.3394595 C0.0433513514,23.6071351 0.128162162,23.7924865 0.297837838,23.8953514 C0.467567568,23.9981622 0.670864865,23.983027 0.907459459,23.8491351 L21.4018378,12.4597838 C21.6386486,12.3258378 21.757027,12.1660541 21.757027,11.9810811 C21.757027,11.7958919 21.6385946,11.6364324 21.4018378,11.5026486 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

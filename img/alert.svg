@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon 24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-Registration-star-1" transform="translate(-427.000000, -2435.000000)">
+            <g id="Group-2" transform="translate(147.000000, 2319.000000)">
+                <g id="Group-4" transform="translate(0.000000, 110.000000)">
+                    <g id="ic_info" transform="translate(279.000000, 5.000000)">
+                        <g id="Icon-24px">
+                            <polygon id="Shape" points="0 0 17 0 17 17 0 17"></polygon>
+                            <path d="M8.5,1.41666667 C4.59,1.41666667 1.41666667,4.59 1.41666667,8.5 C1.41666667,12.41 4.59,15.5833333 8.5,15.5833333 C12.41,15.5833333 15.5833333,12.41 15.5833333,8.5 C15.5833333,4.59 12.41,1.41666667 8.5,1.41666667 L8.5,1.41666667 Z M9.20833333,12.0416667 L7.79166667,12.0416667 L7.79166667,7.79166667 L9.20833333,7.79166667 L9.20833333,12.0416667 L9.20833333,12.0416667 Z M9.20833333,6.375 L7.79166667,6.375 L7.79166667,4.95833333 L9.20833333,4.95833333 L9.20833333,6.375 L9.20833333,6.375 Z" id="Shape" fill="#2E16AD"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

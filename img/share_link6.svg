@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>004-messenger</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4-User-profile-3---2" transform="translate(-653.000000, -525.000000)" fill="#1877F2" fill-rule="nonzero">
+            <g id="Group-10" transform="translate(410.000000, 135.000000)">
+                <g id="Group-3" transform="translate(201.000000, 374.000000)">
+                    <g id="004-messenger" transform="translate(42.000000, 16.000000)">
+                        <path d="M0,11.111 C0,14.607 1.744,17.726 4.471,19.763 L4.471,24 L8.557,21.758 C9.647,22.059 10.802,22.223 11.999,22.223 C18.626,22.223 23.999,17.249 23.999,11.112 C24,4.975 18.627,-1.77635684e-15 12,-1.77635684e-15 C5.373,-1.77635684e-15 1.77635684e-15,4.974 0,11.111 Z M10.734,7.999 L13.864,11.258 L19.751,7.999 L13.191,14.961 L10.136,11.703 L4.173,14.962 L10.734,7.999 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
