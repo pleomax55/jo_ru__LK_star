@@ -50,12 +50,16 @@
 // @import "site/fonts";
 
 @import "site/base";
+@import "site/fonts";
 
 @import "site/frame";
 @import "site/frame-media";
 
-@import "site/el-info";
-@import "site/el-info-media";
+@import "site/elements";
+@import "site/elements-media";
+
+@import "site/el-about";
+@import "site/el-about-media";
 
 @import "site/el-order";
 @import "site/el-order-media";
