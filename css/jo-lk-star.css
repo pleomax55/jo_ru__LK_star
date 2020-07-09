@@ -1332,6 +1332,12 @@ button.no-style {
   margin: 0;
   outline: none !important; }
 
+textarea.lk-text,
+textarea {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px; }
+
 .lk-text {
   padding: 0 10px;
   line-height: var(--input-h, 48px);
@@ -1702,11 +1708,17 @@ button.no-style {
   .lk-btn {
     min-width: 1px; }
     .lk-btn.sm-fw {
-      width: 100%; } }
+      width: 100%; }
+  textarea.lk-text,
+  textarea {
+    max-width: 100%;
+    max-height: calc(20px * 6); } }
 
 @media (max-width: 575.98px) {
   .lk-btn.xs-fw {
-    width: 100%; } }
+    width: 100%; }
+  .lk-modal--container {
+    padding: 15px 0; } }
 
 .lk-about--avatar, .lk-about--video {
   position: relative;

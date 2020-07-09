@@ -38,6 +38,11 @@
       width: 100%;
     }
   }
+  textarea.lk-text,
+  textarea {
+    max-width: 100%;
+    max-height: calc(20px * 6);
+  }
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
@@ -45,6 +50,9 @@
     &.xs-fw {
       width: 100%;
     }
+  }
+  .lk-modal--container {
+    padding: 15px 0;
   }
 }
 
