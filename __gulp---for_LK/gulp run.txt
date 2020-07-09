@@ -1,0 +1,11 @@
+First run:
+  Open console in __gulp folder and write:
+    npm install
+
+After "First run":
+  Open console in __gulp folder and write:
+    gulp
+
+
+console command "gulp" - run [build css from scss] and [watch scss files for changes]
+console command "gulp css:build" - run [build css from scss and minify file]
