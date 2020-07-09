@@ -1559,6 +1559,8 @@ textarea {
   .lk-cr-inputs.switch input[type="radio"] + label {
     margin-left: 0;
     padding-left: 50px; }
+  .lk-cr-inputs.inline {
+    display: inline-block; }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type="checkbox"],

@@ -447,6 +447,10 @@ textarea {
       }
     }
   }
+
+  &.inline {
+    display: inline-block;
+  }
 }
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type="checkbox"],
