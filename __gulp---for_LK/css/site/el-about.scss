@@ -67,6 +67,10 @@
       background: transparent;
     }
     &-container {
+      .plyr {
+        max-width: 100%;
+        min-width: 100%;
+      }
     }
     &--content {
       padding-bottom: 170%;

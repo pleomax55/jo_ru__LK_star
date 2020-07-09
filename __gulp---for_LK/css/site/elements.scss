@@ -379,6 +379,8 @@ button {
     border-radius: 5px;
     padding: 2px 8px;
 
+    margin-bottom: 8px;
+
     &:not(:last-child) {
       margin-right: 16px;
     }
@@ -415,7 +417,29 @@ button {
 
 // *** checkbox & radio
 .lk-cr-inputs {
+  position: relative;
   margin-bottom: var(--input-margin-b, 0);
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & + label {
+      margin-left: 0;
+      padding-left: 34px;
+    }
+  }
+  &.switch {
+    input[type="checkbox"],
+    input[type="radio"] {
+      & + label {
+        margin-left: 0;
+        padding-left: 50px;
+      }
+    }
+  }
 }
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type="checkbox"],

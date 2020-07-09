@@ -11,6 +11,10 @@
   --animT: 0.6s;
   --swiper-theme-color: #2b2727; }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0; }
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #2b2727; }
@@ -1506,7 +1510,8 @@ button.no-style {
   display: block;
   background: #ececec;
   border-radius: 5px;
-  padding: 2px 8px; }
+  padding: 2px 8px;
+  margin-bottom: 8px; }
   .lk-tags--item:not(:last-child) {
     margin-right: 16px; }
   .lk-tags--item.active {
@@ -1533,7 +1538,21 @@ button.no-style {
   padding: 5px; }
 
 .lk-cr-inputs {
+  position: relative;
   margin-bottom: var(--input-margin-b, 0); }
+  .lk-cr-inputs input[type="checkbox"],
+  .lk-cr-inputs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .lk-cr-inputs input[type="checkbox"] + label,
+    .lk-cr-inputs input[type="radio"] + label {
+      margin-left: 0;
+      padding-left: 34px; }
+  .lk-cr-inputs.switch input[type="checkbox"] + label,
+  .lk-cr-inputs.switch input[type="radio"] + label {
+    margin-left: 0;
+    padding-left: 50px; }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type="checkbox"],
@@ -1739,6 +1758,10 @@ button.no-style {
 .lk-about--video * {
   background: transparent; }
 
+.lk-about--video-container .plyr {
+  max-width: 100%;
+  min-width: 100%; }
+
 .lk-about--video--content {
   padding-bottom: 170%; }
 
@@ -1827,6 +1850,12 @@ button.no-style {
     border-radius: 100px !important; }
     .lk-about--price--extra-info:hover, .lk-about--price--extra-info:focus {
       box-shadow: 0 0 0 3px rgba(255, 194, 64, 0.58); }
+
+@media (max-width: 575.98px) {
+  .lk-about--avatar-container,
+  .lk-about--video-container {
+    min-width: 120px;
+    max-width: 100%; } }
 
 .lk-profile--avatar {
   position: relative;

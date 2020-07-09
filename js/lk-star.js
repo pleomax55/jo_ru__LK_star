@@ -15,6 +15,7 @@ jQuery(document).ready(function ($) {
           type: "inline",
           baseClass: "mobile-menu-modal",
           touch: false,
+          autoFocus: false,
           animationEffect: "fade",
           animationDuration: 366,
           transitionEffect: false,

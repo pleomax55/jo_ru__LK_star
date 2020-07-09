@@ -25,6 +25,11 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .lk-about--avatar-container,
+  .lk-about--video-container {
+    min-width: 120px;
+    max-width: 100%;
+  }
 }
 
 // ? Custom
