@@ -26,12 +26,12 @@ jQuery(document).ready(function ($) {
       : 0;
   });
 
+  // *** #slider
   var priceSlider01 = $("#slider")[0];
   if (priceSlider01) {
     noUiSlider.create(priceSlider01, {
       start: [6000],
-      // tooltips: [wNumb({ decimals: 0, suffix: " ₽" })],
-      step: 50,
+      step: 100,
       range: {
         min: [100],
         max: [200000],
@@ -46,21 +46,19 @@ jQuery(document).ready(function ($) {
           .attr("data-value", n.from(value[0]));
       }, 250);
     });
-    // $($("#slider").data("for")).on("input", function () {
-    //   let tE = $(this);
-    //   priceSlider01.noUiSlider.set(Number(tE.val()));
-    //   clearTimeout(timer);
-    //   timer2 = setTimeout(function () {
-    //     if (Number(tE.val()) < 100) {
-    //       tE.val(100);
-    //       priceSlider01.noUiSlider.set(Number(tE.val()));
-    //     } else if (Number(tE.val()) > 200000) {
-    //       tE.val(200000);
-    //       priceSlider01.noUiSlider.set(Number(tE.val()));
-    //     }
-    //     clearTimeout(timer2);
-    //   }, 1000);
-    // });
+  }
+  // *** #slider-2
+  var priceSlider02 = $("#slider-2")[0];
+  if (priceSlider02) {
+    noUiSlider.create(priceSlider02, {
+      start: [3000],
+      tooltips: [wNumb({ decimals: 0, suffix: " ₽" })],
+      step: 100,
+      range: {
+        min: [100],
+        max: [200000],
+      },
+    });
   }
 
   if ($(".lk-about--video--player").length) {
@@ -77,6 +75,25 @@ jQuery(document).ready(function ($) {
       instance.play();
     });
   }
+
+  $("body").on("click", ".lk-open-base-modal", function () {
+    let dSrc = $(this).attr("data-src");
+    dSrc
+      ? $.fancybox.open({
+          modal: true,
+          src: dSrc,
+          type: "inline",
+          baseClass: "lk-base-modal",
+          touch: false,
+          animationEffect: "fade",
+          animationDuration: 366,
+          transitionEffect: false,
+          transitionDuration: 0,
+          // afterClose: function (instance, current) {
+          // },
+        })
+      : 0;
+  });
 
   //
 });

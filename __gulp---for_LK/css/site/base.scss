@@ -112,13 +112,19 @@ select:-webkit-autofill:focus {
 
 a {
   color: $tC;
+  outline: none !important;
+  &:focus,
   &:hover {
-    color: $tC;
-    text-decoration: none;
+    // color: $tC;
+    text-decoration: underline;
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($pC, 0.38);
   }
 }
+
 .hover-ef {
-  text-decoration: none;
+  text-decoration: none !important;
   position: relative;
   z-index: 1;
   &:before {

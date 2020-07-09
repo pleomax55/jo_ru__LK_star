@@ -12,7 +12,9 @@
   <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css" />
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
   <link rel="stylesheet"
@@ -358,57 +360,61 @@
               <div class="row">
                 <div class="col">
                   <div class="lk-about--user-name">
-                    <h2>
+                    <a href="#">
                       Артур Пашутин
-                      <div class="lk-about--user-name--crown">
-                        <svg viewBox="0 0 26 21"
-                             fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                          <path d="M26 1.88186C26 0.844198 25.2931 0 24.4243 0C23.5554 0 22.8485 0.844198 22.8485 1.88186C22.8485 2.40069 23.0252 2.87118 23.3105 3.21189L18.5152 8.93891L13.8987 3.42561C14.3074 3.08526 14.5758 2.52071 14.5758 1.88192C14.5758 0.844258 13.869 6.06131e-05 13.0001 6.06131e-05C12.1312 6.06131e-05 11.4244 0.844258 11.4244 1.88192C11.4244 2.52071 11.6928 3.08526 12.1015 3.42561L7.485 8.93891L2.68968 3.21189C2.97497 2.87118 3.15169 2.40069 3.15169 1.88186C3.15169 0.844198 2.44481 0 1.57595 0C0.707078 0 0 0.844198 0 1.88186C0 2.75686 0.503293 3.49208 1.18183 3.7018V20.2301H24.8182V3.70186C25.4967 3.49214 26 2.75686 26 1.88186Z"
-                                fill="currentColor" />
-                          <path d="M24.4785 0C23.6396 0 22.9571 0.844193 22.9571 1.88185C22.9571 2.40067 23.1277 2.87117 23.4032 3.21187L18.7732 8.93886L14.3159 3.42559C14.7105 3.08525 14.9697 2.52069 14.9697 1.88191C14.9697 0.844253 14.2872 6.06127e-05 13.4482 6.06127e-05V20.2301H24.859V3.70183C25.514 3.49212 25.9999 2.75685 25.9999 1.88185C25.9999 0.844193 25.3174 0 24.4785 0Z"
-                                fill="currentColor" />
-                        </svg>
-                      </div>
-                    </h2>
+                    </a>
+                    <div class="lk-about--user-name--crown">
+                      <svg viewBox="0 0 26 21"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26 1.88186C26 0.844198 25.2931 0 24.4243 0C23.5554 0 22.8485 0.844198 22.8485 1.88186C22.8485 2.40069 23.0252 2.87118 23.3105 3.21189L18.5152 8.93891L13.8987 3.42561C14.3074 3.08526 14.5758 2.52071 14.5758 1.88192C14.5758 0.844258 13.869 6.06131e-05 13.0001 6.06131e-05C12.1312 6.06131e-05 11.4244 0.844258 11.4244 1.88192C11.4244 2.52071 11.6928 3.08526 12.1015 3.42561L7.485 8.93891L2.68968 3.21189C2.97497 2.87118 3.15169 2.40069 3.15169 1.88186C3.15169 0.844198 2.44481 0 1.57595 0C0.707078 0 0 0.844198 0 1.88186C0 2.75686 0.503293 3.49208 1.18183 3.7018V20.2301H24.8182V3.70186C25.4967 3.49214 26 2.75686 26 1.88186Z"
+                              fill="currentColor" />
+                        <path d="M24.4785 0C23.6396 0 22.9571 0.844193 22.9571 1.88185C22.9571 2.40067 23.1277 2.87117 23.4032 3.21187L18.7732 8.93886L14.3159 3.42559C14.7105 3.08525 14.9697 2.52069 14.9697 1.88191C14.9697 0.844253 14.2872 6.06127e-05 13.4482 6.06127e-05V20.2301H24.859V3.70183C25.514 3.49212 25.9999 2.75685 25.9999 1.88185C25.9999 0.844193 25.3174 0 24.4785 0Z"
+                              fill="currentColor" />
+                      </svg>
+                    </div>
                   </div>
-                  <a href="#"
-                     class="lk-about--link--my-card">моя карточка</a>
+                  <div>
+                    <a href="#"
+                       class="lk-about--link--my-card">моя карточка</a>
+                  </div>
                   <div class="lk-star-rating">
                     <div class="r-stars"
                          style="--rating: 3.33;"></div>
                     <div class="r-stars-num">3.33</div>
                   </div>
                 </div>
+                <div class="col-auto">
+                  <div class="div">
+                    Я не доступен для заказов
+                  </div>
+                </div>
               </div>
 
               <div class="row pt-5">
                 <div class="col-lg-5">
-                  <div class="lk-about--cat">
+                  <div class="lk-about--cat lk-edit-this">
                     Категории: Insta-блогер, Театрал
                   </div>
                 </div>
                 <div class="col-lg-4">
-                  <div class="lk-about--soc">
+                  <div class="lk-about--soc lk-edit-this">
                     Соц. сети: <br>
                     <div class="lk-about--soc-container">
-                      <a href="#"
-                         class="lk-about--soc-item">
+                      <a class="lk-about--soc-item">
                         <img src="./img/vk.svg">
                       </a>
-                      <a href="#"
-                         class="lk-about--soc-item">
+                      <a class="lk-about--soc-item">
                         <img src="./img/tw.svg">
                       </a>
-                      <a href="#"
-                         class="lk-about--soc-item">
+                      <a class="lk-about--soc-item">
                         <img src="./img/tik-tok.svg">
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3">
-                  <div class="lk-about--price">
+                  <div class="lk-about--price lk-edit-this">
                     Цена: <br>
                     <b>3500 руб.</b>
                   </div>
@@ -417,14 +423,15 @@
 
               <div class="row pt-5">
                 <div class="col">
-                  <div class="lk-about--period">
+                  <div class="lk-about--short-desc lk-edit-this lk-open-base-modal"
+                       data-src="#lk-edit--about--short-desc">
                     Краткое описание: <br>
                     отпишите после теста, если что-то пойдет не так, вместе подебажим. У меня почта ходила на все ящики норм. <br>
                     отпишите после теста, если что-то пойдет не так, вместе подебажим. У меня почта ходила на все ящики норм.
                   </div>
                 </div>
                 <div class="col-lg-3">
-                  <div class="lk-about--period">
+                  <div class="lk-about--period lk-edit-this">
                     Срок исполнения: <br>
                     <b>7 дней</b>
                   </div>
@@ -433,18 +440,14 @@
 
               <div class="row pt-5">
                 <div class="col">
-                  <div class="lk-about--tag">
-                    <div class="lk-about--tag-container">
-                      <a href="#"
-                         class="lk-about--tag--item">Модель</a>
-                      <a href="#"
-                         class="lk-about--tag--item">Модель</a>
-                      <a href="#"
-                         class="lk-about--tag--item">Модель</a>
-                      <a href="#"
-                         class="lk-about--tag--item">Модель</a>
-                      <a href="#"
-                         class="lk-about--tag--item">Модель</a>
+
+                  <div class="lk-tags lk-edit-this">
+                    <div class="lk-tags-container">
+                      <a class="lk-tags--item">Модель</a>
+                      <a class="lk-tags--item">Модель</a>
+                      <a class="lk-tags--item">Модель</a>
+                      <a class="lk-tags--item">Модель</a>
+                      <a class="lk-tags--item">Модель</a>
                     </div>
                   </div>
 
@@ -455,7 +458,8 @@
           </div>
           <div class="row pt-5">
             <div class="col">
-              <div class="lk-about--main-text">
+              <div class="lk-about--main-text lk-edit-this lk-open-base-modal"
+                   data-src="#lk-edit--about--main-text">
                 <h3>О звезде</h3>
                 <p>Повседневная практика показывает, что начало повседневной работы<br>по формированию позиции влечет за собой процесс внедрения и
                   модернизации соответствующий условий активизации.<br>Повседневная практика показывает, что новая модель организационной деятельности
@@ -479,14 +483,90 @@
   </div>
 
 
+  <!-- ! MODALS -->
+  <!-- *** .lk-about--main-text -->
+  <div id="lk-edit--about--main-text"
+       class="lk-modal--container">
+    <div class="lk-modal">
+      <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <h3 class="lk-modal--header-text">О звезде</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col pb-4">
+            <textarea name=""
+                      id=""
+                      cols="60"
+                      rows="10"
+                      class="lk-text"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-right">
+            <div class="lk-btn-group">
+              <button class="lk-btn white"
+                      data-fancybox-close>Отменить</button>
+              <button class="lk-btn"
+                      data-fancybox-close>Принять</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- *** .lk-about--short-desc -->
+  <div id="lk-edit--about--short-desc"
+       class="lk-modal--container">
+    <div class="lk-modal">
+      <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <h3 class="lk-modal--header-text">Краткое описание</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col pb-4">
+            <textarea name=""
+                      id=""
+                      cols="60"
+                      rows="6"
+                      class="lk-text"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-right">
+            <div class="lk-btn-group">
+              <button class="lk-btn white"
+                      data-fancybox-close>Отменить</button>
+              <button class="lk-btn"
+                      data-fancybox-close>Принять</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ! MODALS -->
+
+
   <!-- ! Scripts -->
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
