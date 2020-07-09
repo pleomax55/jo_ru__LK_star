@@ -74,7 +74,7 @@
             <!-- important duplicate -->
 
             <a href="#"
-               class="lk-header-menu--item active">
+               class="lk-header-menu--item">
               <div class="lk-header-menu--item-icon"><svg viewBox="0 0 18 18"
                      fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +191,7 @@
               <div class="lk-header-menu--item-name">Мои подарки</div>
             </a>
             <a href="#"
-               class="lk-header-menu--item">
+               class="lk-header-menu--item active">
               <div class="lk-header-menu--item-icon"><svg viewBox="0 0 16 17"
                      fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -240,7 +240,7 @@
             </div>
 
             <div class="col-auto d-none d-md-block">
-              <h2 class="lk-header--page-name">Обо мне</h2>
+              <h2 class="lk-header--page-name">Профиль</h2>
             </div>
 
             <div class="col">
@@ -297,233 +297,257 @@
       <!-- ! header -->
 
       <section>
-        <div class="container pb-5">
+        <div class="container pt-4 pb-5">
+
           <div class="row">
+
+            <div class="col-auto">
+              <div class="lk-profile--avatar-container">
+                <div class="lk-profile--avatar">
+                  <div class="lk-profile--avatar--icon">
+                    <svg viewBox="0 0 47 47"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M40.751 5.18311H5.58271C5.33726 5.18311 5.10186 5.28061 4.92829 5.45417C4.75473 5.62773 4.65723 5.86313 4.65723 6.10859V32.0221C4.65723 32.2675 4.75473 32.503 4.92829 32.6765C5.10186 32.8501 5.33726 32.9476 5.58271 32.9476H40.751C40.9965 32.9476 41.2319 32.8501 41.4055 32.6765C41.579 32.503 41.6765 32.2675 41.6765 32.0221V6.10859C41.6765 5.86313 41.579 5.62773 41.4055 5.45417C41.2319 5.28061 40.9965 5.18311 40.751 5.18311ZM39.8256 7.03407V21.8945L34.8104 18.3129C34.668 18.2111 34.4996 18.1517 34.3248 18.1417C34.15 18.1317 33.976 18.1715 33.8229 18.2565L26.1044 22.5452L19.1938 15.6346C19.0504 15.4917 18.8642 15.3998 18.6636 15.3729C18.463 15.346 18.2591 15.3856 18.0832 15.4856L6.50819 22.0981V7.03407H39.8256ZM6.50819 24.2295L18.3849 17.443L32.0385 31.0966H6.50819V24.2295ZM34.6558 31.0966L27.4648 23.9056L34.2107 20.1583L39.8256 24.1685V31.0966H34.6558Z"
+                            fill="currentColor" />
+                      <path d="M43.5275 0.557129H2.80623C2.06987 0.557129 1.36367 0.849647 0.842988 1.37033C0.322303 1.89102 0.0297852 2.59722 0.0297852 3.33358V44.0548C0.0297852 44.7912 0.322303 45.4974 0.842988 46.018C1.36367 46.5387 2.06987 46.8312 2.80623 46.8312H43.5275C44.2638 46.8312 44.97 46.5387 45.4907 46.018C46.0114 45.4974 46.3039 44.7912 46.3039 44.0548V3.33358C46.3039 2.59722 46.0114 1.89102 45.4907 1.37033C44.97 0.849647 44.2638 0.557129 43.5275 0.557129ZM44.4529 44.0548C44.4529 44.3003 44.3554 44.5357 44.1819 44.7092C44.0083 44.8828 43.7729 44.9803 43.5275 44.9803H2.80623C2.56078 44.9803 2.32538 44.8828 2.15182 44.7092C1.97826 44.5357 1.88075 44.3003 1.88075 44.0548V3.33358C1.88075 3.08812 1.97826 2.85272 2.15182 2.67916C2.32538 2.5056 2.56078 2.40809 2.80623 2.40809H43.5275C43.7729 2.40809 44.0083 2.5056 44.1819 2.67916C44.3554 2.85272 44.4529 3.08812 44.4529 3.33358V44.0548Z"
+                            fill="currentColor" />
+                      <path d="M26.8689 19.0663C27.7841 19.0663 28.6788 18.795 29.4397 18.2865C30.2007 17.778 30.7938 17.0553 31.144 16.2098C31.4943 15.3642 31.5859 14.4338 31.4074 13.5362C31.2288 12.6385 30.7881 11.814 30.1409 11.1669C29.4938 10.5197 28.6693 10.079 27.7716 9.90044C26.874 9.72189 25.9436 9.81353 25.098 10.1638C24.2525 10.514 23.5298 11.1071 23.0213 11.8681C22.5128 12.6291 22.2415 13.5237 22.2415 14.4389C22.2429 15.6658 22.7309 16.8419 23.5984 17.7094C24.4659 18.5769 25.6421 19.0649 26.8689 19.0663ZM26.8689 11.6625C27.418 11.6625 27.9548 11.8253 28.4114 12.1304C28.868 12.4355 29.2238 12.8691 29.434 13.3764C29.6441 13.8838 29.6991 14.442 29.592 14.9806C29.4848 15.5192 29.2204 16.0139 28.8321 16.4022C28.4438 16.7905 27.9491 17.0549 27.4105 17.162C26.872 17.2692 26.3137 17.2142 25.8064 17.004C25.299 16.7939 24.8654 16.438 24.5603 15.9814C24.2553 15.5249 24.0924 14.9881 24.0924 14.4389C24.0924 13.7026 24.3849 12.9964 24.9056 12.4757C25.4263 11.955 26.1325 11.6625 26.8689 11.6625Z"
+                            fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="lk-profile--avatar--text">Аватар</div>
+                  <div class="lk-profile--avatar--content">
+                    <!-- <div class=""> -->
+                    <div class="d-none">
+                      <img src="./img/user-1.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="col">
 
-              <h3>Elements Example</h3>
-              <br>
-
-              <br>
-              <a href="#">base link</a>
-              &nbsp; &nbsp; &nbsp;
-              <a href="#"
-                 class="hover-ef">link + .hover-ef</a>
-              <br>
-              <br>
-              <br>
-
-              <div class="lk-tags">
-                <div class="lk-tags-container">
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item active">Модель</a>
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item">Модель</a>
+              <div class="row">
+                <div class="col">
+                  <div class="lk-text-label w-100">
+                    <label for="lk-profile---name">Имя</label>
+                    <input type="text"
+                           id="lk-profile---name"
+                           class="lk-text">
+                  </div>
                 </div>
-              </div>
-              <br>
-              <div class="lk-tags lk-edit-this">
-                <div class="lk-tags-container">
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item active"><i>2</i>Модель</a>
-                  <a class="lk-tags--item">Модель</a>
-                  <a class="lk-tags--item active"><i>1</i>Модель</a>
+                <div class="col">
+                  <div class="lk-text-label w-100">
+                    <label for="lk-profile---last-name">Фамилия</label>
+                    <input type="text"
+                           id="lk-profile---last-name"
+                           class="lk-text">
+                  </div>
                 </div>
-              </div>
-
-              <br>
-              <br>
-
-              <div class="lk-cr-inputs">
-                <input type="checkbox"
-                       name=""
-                       id="my_checkbox_switch"
-                       class="switch">
-                <label for="my_checkbox_switch">my_checkbox_switch</label>
-              </div>
-              <div class="lk-cr-inputs">
-                <input type="checkbox"
-                       name=""
-                       id="my_checkbox_1">
-                <label for="my_checkbox_1">my_checkbox_1</label>
-                <input type="checkbox"
-                       checked
-                       name=""
-                       id="my_checkbox_2">
-                <label for="my_checkbox_2">my_checkbox_2</label>
-              </div>
-              <div class="lk-cr-inputs">
-                <input type="radio"
-                       name="group_radio"
-                       id="my_radio_1">
-                <label for="my_radio_1">my_radio_1</label>
-
-                <input type="radio"
-                       name="group_radio"
-                       id="my_radio_2">
-                <label for="my_radio_2">my_radio_2</label>
-              </div>
-
-              <br>
-              <br>
-
-              <div style="max-width: 150px;">
-                <i>for example:<br>max-width: 150px;</i>
-                <div class="lk-text-label">
-                  <label for="my_input_1">label for my_input_1 label for my_input_1</label>
-                  <input type="text"
-                         id="my_input_1"
-                         class="lk-text">
-                </div>
-              </div>
-              <div class="lk-text-label w-100">
-                <label for="my_input_2">label for my_input_1</label>
-                <input type="text"
-                       id="my_input_2"
-                       class="lk-text">
-              </div>
-              <br>
-              <div class="lk-text-label complete">
-                <input type="text"
-                       class="lk-text">
-              </div>
-              <div class="lk-text-label complete w-100">
-                <input type="text"
-                       class="lk-text">
               </div>
 
               <div class="row">
                 <div class="col">
-                  <div class="lk-text-label complete w-100">
+                  <div class="lk-text-label w-100">
+                    <label for="lk-profile---birthday">Дата рождения</label>
                     <input type="text"
+                           id="lk-profile---birthday"
                            class="lk-text">
                   </div>
                 </div>
                 <div class="col">
-                  <div class="lk-text-label complete w-100">
-                    <input type="text"
-                           class="lk-text">
-                  </div>
-                </div>
-              </div>
-
-              <br>
-              <br>
-
-              <input type="text"
-                     class="lk-text">
-
-              <input type="text"
-                     class="lk-text"
-                     disabled>
-
-              <input type="number"
-                     class="lk-text">
-
-              <input type="submit"
-                     value="Send">
-
-              <input type="button"
-                     class="lk-btn"
-                     value="input:btn">
-
-              <br>
-              <br>
-              <br>
-
-              <input type="text"
-                     id="slider-input"
-                     class="lk-text text-center"
-                     disabled>
-              <br>
-              <br>
-              <div class="lk-slider">
-                <div id="slider"
-                     data-for="#slider-input"></div>
-              </div>
-              <br>
-              <br>
-
-              <div class="container">
-                <div class="row">
-                  <div class="col pl-4 pr-5">
-                    <div class="lk-slider">
-                      <div id="slider-2"
-                           data-for="#slider-input"></div>
-                      <div class="lk-slider--lines">
-                        <div style="left:calc(0% + 0px);"></div>
-                        <div style="left:calc(30% + 0px);"></div>
-                        <div style="left:calc(60% + 0px);"></div>
-                        <div style="left:calc(100% + 0px);"></div>
-                      </div>
+                  <div class="lk-box-label w-100">
+                    <label for="lk-profile---sex">Ваш пол</label>
+                    <div class="lk-btn-group">
+                      <button class="lk-btn white w-auto px-4">Ж</button>
+                      <button class="lk-btn w-auto px-4">М</button>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-md mb-3">
-                    до <b>3000</b>₽ <br>новые лица
+              </div>
+
+              <div class="row pt-4">
+                <div class="col">
+                  <h4>Контактные данные</h4>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col">
+                  <div class="lk-text-label w-100">
+                    <label for="lk-profile---email">Email</label>
+                    <div class="lk-text-label complete">
+                      <input type="email"
+                             id="lk-profile---email"
+                             class="lk-text"
+                             value="user@gmail.com">
+                    </div>
+                    <div class="lk-edit-link">
+                      <a href="#">заменить email</a>
+                    </div>
                   </div>
-                  <div class="col-12 col-md mb-3">
-                    до <b>7000</b>₽ <br>успешные блогеры
+                </div>
+
+                <div class="col">
+                  <div class="lk-text-label w-100">
+                    <label for="lk-profile---phone">Телефон</label>
+                    <div class="lk-text-label">
+                      <input type="tel"
+                             id="lk-profile---phone"
+                             class="lk-text">
+                    </div>
                   </div>
-                  <div class="col-12 col-md mb-3">
-                    до <b>50 000</b>₽ <br>топовые селебрити
+                </div>
+
+              </div>
+
+              <div class="row pt-4">
+                <div class="col">
+                  <h4>Уведомления</h4>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col">
+                  <div class="lk-cr-inputs">
+                    <input type="checkbox"
+                           checked
+                           name=""
+                           id="my_checkbox_1">
+                    <label for="my_checkbox_1">Получать рассылку от JO.RU</label>
                   </div>
-                  <div class="col-12 col-md mb-3 text-right">
-                    до <b>200 000</b>₽ <br>имиджевые акции
+                  <div class="lk-cr-inputs">
+                    <input type="checkbox"
+                           checked
+                           name=""
+                           id="my_checkbox_2">
+                    <label for="my_checkbox_2">Получать уведомления о статусах заказа</label>
+                  </div>
+                  <div class="lk-cr-inputs">
+                    <input type="checkbox"
+                           checked
+                           name=""
+                           id="my_checkbox_2">
+                    <label for="my_checkbox_2">Отправлять виде звезд на почту </label>
                   </div>
                 </div>
               </div>
 
-              <br>
-              <br>
+            </div>
 
+          </div>
 
-              <div>
-                <button class="lk-btn w-auto">1</button>
-                <button class="lk-btn w-auto">Принять</button>
-                <button class="lk-btn w-auto">(width auto)</button>
+          <div class="row pt-5">
+            <div class="col">
+              <div class="text-right">
+                <button class="lk-btn">Cохранить</button>
               </div>
-              <button class="lk-btn white w-auto">1</button>
-              <button class="lk-btn white w-auto">2</button>
-              <button class="lk-btn white w-auto px-4">1</button>
-              <button class="lk-btn white w-auto px-4">2</button>
-              <button class="lk-btn white w-auto px-4">bootstrap, px-4</button>
-              <button class="lk-btn white w-auto px-5">bootstrap, px-5</button>
-              <button class="lk-btn white w-auto px-1">bootstrap, px-1</button>
-              <br>
-              <button class="lk-btn white">Отменить</button>
-              <button class="lk-btn">Принять</button>
-              <br>
-              <div class="lk-btn-group">
-                <button class="lk-btn white">Отменить</button>
-                <button class="lk-btn white">btns group</button>
-                <button class="lk-btn">Принять</button>
-              </div>
-              <br>
-              <div class="lk-btn-group column">
-                <button class="lk-btn white">Отменить</button>
-                <button class="lk-btn white">column btns group</button>
-                <button class="lk-btn">Принять</button>
-              </div>
-              <br>
-              <button class="lk-btn white fw no-margin">Кнопка (w:100% + no-margin)</button>
-              <button class="lk-btn fw">Кнопка (w:100%)</button>
-              <button class="lk-btn fw white">Кнопка (w:100%)</button>
-              <button class="lk-btn lg-fw">Кнопка (lg w:100%)</button>
-              <button class="lk-btn md-fw">Кнопка (md w:100%)</button>
-              <button class="lk-btn sm-fw">Кнопка (sm w:100%)</button>
-              <button class="lk-btn xs-fw">Кнопка (xs w:100%)</button>
-
             </div>
           </div>
+
         </div>
       </section>
 
     </div>
   </div>
+
+
+  <!-- ! MODALS -->
+  <!-- *** .lk-profile--main-text -->
+  <div id="lk-edit--profile--main-text"
+       class="lk-modal--container">
+    <div class="lk-modal">
+      <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <h3 class="lk-modal--header-text">О звезде</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col pb-4">
+            <textarea name=""
+                      id=""
+                      cols="60"
+                      rows="10"
+                      class="lk-text"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-right">
+            <div class="lk-btn-group">
+              <button class="lk-btn white"
+                      data-fancybox-close>Отменить</button>
+              <button class="lk-btn"
+                      data-fancybox-close>Принять</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- *** .lk-profile--short-desc -->
+  <div id="lk-edit--profile--short-desc"
+       class="lk-modal--container">
+    <div class="lk-modal">
+      <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <h3 class="lk-modal--header-text">Краткое описание</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col pb-4">
+            <textarea name=""
+                      id=""
+                      cols="60"
+                      rows="6"
+                      class="lk-text"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-right">
+            <div class="lk-btn-group">
+              <button class="lk-btn white"
+                      data-fancybox-close>Отменить</button>
+              <button class="lk-btn"
+                      data-fancybox-close>Принять</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- *** .lk-profile--price--extra-info -->
+  <div id="lk-modal--profile-price-extra-info"
+       class="lk-modal--container">
+    <div class="lk-modal">
+      <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <b>
+              <h3>Информация о размере вознаграждения JO.ru</h3>
+              <h4>Размер вознаграждения JO.ru на настоящий момент:</h4>
+            </b>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ! MODALS -->
 
 
   <!-- ! Scripts -->

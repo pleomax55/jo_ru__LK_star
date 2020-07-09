@@ -99,8 +99,11 @@ input[type="submit"] {
     > .lk-btn {
       margin: 0;
       border-radius: 0;
+      &:not(:first-child) {
+        border-left-width: 0;
+      }
       &:first-child {
-        border-right-width: 0;
+        border-right-width: 1px;
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
       }
@@ -116,9 +119,13 @@ input[type="submit"] {
       > .lk-btn {
         margin-bottom: 0;
         border-radius: 0;
+        border-left-width: var(--btn-border-w, 1px);
+        &:not(:first-child) {
+          border-top-width: 0;
+        }
         &:first-child {
           border-right-width: var(--btn-border-w, 1px);
-          border-bottom-width: 0;
+          border-bottom-width: 1px;
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
         }
@@ -130,6 +137,19 @@ input[type="submit"] {
         }
       }
     }
+  }
+}
+
+button {
+  &.no-style {
+    min-height: auto;
+    min-width: auto;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    outline: none !important;
   }
 }
 
@@ -154,37 +174,6 @@ input[type="submit"] {
     cursor: not-allowed;
   }
 
-  &-complete {
-    position: relative;
-    display: inline-flex;
-    max-width: 100%;
-    margin-right: var(--input-margin-r, 0);
-    margin-bottom: var(--input-margin-b, 0);
-    > * {
-      margin: 0;
-      padding-right: 35px;
-    }
-    &.w-100 {
-      > * {
-        width: 100%;
-      }
-    }
-
-    &:before {
-      content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12.5' cy='12.5' r='12' stroke='%2372C850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.8536 9.15771C17.0488 9.36799 17.0488 9.70893 16.8536 9.91921L11.3536 15.8423C11.1583 16.0526 10.8417 16.0526 10.6464 15.8423L8.14645 13.15C7.95118 12.9397 7.95118 12.5988 8.14645 12.3885C8.34171 12.1782 8.65829 12.1782 8.85355 12.3885L11 14.7L16.1464 9.15771C16.3417 8.94743 16.6583 8.94743 16.8536 9.15771Z' fill='%2372C850'/%3E%3C/svg%3E");
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      top: 50%;
-      right: 6px;
-      transform: translateY(-50%);
-      font-size: 0;
-      z-index: 100;
-    }
-  }
   &-label {
     display: inline-flex;
     flex-direction: column;
@@ -201,10 +190,67 @@ input[type="submit"] {
       line-height: 22px;
     }
     &.w-100 {
-      > * {
+      > *,
+      > * > * {
         width: 100%;
       }
     }
+
+    &.complete {
+      position: relative;
+      display: inline-flex;
+      max-width: 100%;
+      margin-right: var(--input-margin-r, 0);
+      margin-bottom: var(--input-margin-b, 0);
+      > * {
+        margin: 0;
+        padding-right: 35px;
+      }
+
+      &:before {
+        content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12.5' cy='12.5' r='12' stroke='%2372C850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.8536 9.15771C17.0488 9.36799 17.0488 9.70893 16.8536 9.91921L11.3536 15.8423C11.1583 16.0526 10.8417 16.0526 10.6464 15.8423L8.14645 13.15C7.95118 12.9397 7.95118 12.5988 8.14645 12.3885C8.34171 12.1782 8.65829 12.1782 8.85355 12.3885L11 14.7L16.1464 9.15771C16.3417 8.94743 16.6583 8.94743 16.8536 9.15771Z' fill='%2372C850'/%3E%3C/svg%3E");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        transform: translateY(-50%);
+        font-size: 0;
+        z-index: 100;
+      }
+    }
+  }
+}
+
+.lk-edit-link {
+  text-align: right;
+  a {
+    padding: 0px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9c9c9c;
+  }
+}
+
+.lk-box-label {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-right: var(--input-margin-r, 0);
+  margin-bottom: var(--input-margin-b, 0);
+  > * {
+    margin: 0;
+  }
+  label {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -314,11 +360,18 @@ input[type="submit"] {
     display: block;
     background: #ececec;
     border-radius: 5px;
-    padding: 1px 6px;
+    padding: 2px 8px;
 
     &:not(:last-child) {
       margin-right: 16px;
     }
+    &.active {
+      background-color: $pC;
+    }
+  }
+  i {
+    font-style: normal;
+    margin-right: 6px;
   }
 }
 
@@ -336,6 +389,10 @@ input[type="submit"] {
     line-height: 30px;
     color: #707070;
     margin-bottom: 20px;
+  }
+
+  + .fancybox-close-small {
+    padding: 5px;
   }
 }
 

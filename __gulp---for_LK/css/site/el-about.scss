@@ -159,5 +159,28 @@
     }
   }
 
+  &--price {
+    position: relative;
+    min-width: 180px;
+    max-width: 300px;
+
+    &--extra-info {
+      z-index: 10;
+      position: absolute;
+      top: 0px;
+      right: 30px;
+      width: 26px;
+      height: 26px;
+      font-size: 0;
+      cursor: help !important;
+      border: 0 !important;
+      border-radius: 100px !important;
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($pC, 0.58);
+      }
+    }
+  }
+
   // !
 }

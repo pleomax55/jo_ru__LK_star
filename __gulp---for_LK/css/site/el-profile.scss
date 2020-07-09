@@ -1,0 +1,63 @@
+//
+
+.lk-profile {
+  // ?
+
+  &--avatar {
+    &-container {
+      min-width: 200px;
+      max-width: 200px;
+
+      margin-bottom: 16px;
+    }
+
+    position: relative;
+    background: #ececec;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0px 25px 25px 24px;
+
+    video,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &--icon,
+    &--text {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &--icon {
+      transform: translate(-50%, calc(-50% - 20px));
+      width: 60px;
+      height: 60px;
+      color: #4f4e56;
+    }
+    &--text {
+      transform: translate(-50%, calc(-50% + 35px));
+      width: 94%;
+      height: auto;
+      color: #4f4e56;
+      text-align: center;
+    }
+    &--content {
+      z-index: 5;
+      width: 100%;
+      position: relative;
+      padding-bottom: 100%;
+      > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    //
+  }
+
+  // !
+}

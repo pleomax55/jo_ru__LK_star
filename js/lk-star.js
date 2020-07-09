@@ -94,6 +94,24 @@ jQuery(document).ready(function ($) {
         })
       : 0;
   });
+  $("body").on("click", ".lk-open-simple-modal", function () {
+    let dSrc = $(this).attr("data-src");
+    dSrc
+      ? $.fancybox.open({
+          // modal: true,
+          src: dSrc,
+          type: "inline",
+          baseClass: "lk-simple-modal",
+          touch: false,
+          animationEffect: "fade",
+          animationDuration: 366,
+          transitionEffect: false,
+          transitionDuration: 0,
+          // afterClose: function (instance, current) {
+          // },
+        })
+      : 0;
+  });
 
   //
 });
