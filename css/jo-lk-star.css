@@ -1336,6 +1336,7 @@ button.no-style {
   border: var(--input-border-w, 1px) solid #c4c4c4;
   box-sizing: border-box;
   border-radius: 8px;
+  transition: box-shadow 266ms;
   margin-right: var(--input-margin-r, 0);
   margin-bottom: var(--input-margin-b, 0); }
   .lk-text:focus {
@@ -1344,6 +1345,16 @@ button.no-style {
   .lk-text:disabled {
     background-color: #fff;
     cursor: not-allowed; }
+  .lk-text.error {
+    border-color: #f00; }
+    .lk-text.error:focus {
+      border-color: #f00;
+      box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.38); }
+  .lk-text.success {
+    border-color: #45da4c; }
+    .lk-text.success:focus {
+      border-color: #45da4c;
+      box-shadow: 0 0 0 3px rgba(69, 218, 76, 0.38); }
   .lk-text-label {
     display: inline-flex;
     flex-direction: column;
