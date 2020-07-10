@@ -610,3 +610,12 @@ textarea {
     }
   }
 }
+
+.lk-filters {
+  &--order-sort,
+  &--order-type {
+    a.selected:before {
+      background: $pC;
+    }
+  }
+}

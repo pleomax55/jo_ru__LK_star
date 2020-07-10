@@ -300,30 +300,519 @@
         <div class="container pt-4 pb-5">
 
           <div class="row">
-            <div class="col">
+            <div class="col-auto">1</div>
+            <div class="col-auto">2</div>
+            <div class="col-auto">3</div>
+            <div class="col-auto">4</div>
+            <div class="col-auto">5</div>
+          </div>
 
-              <div class="row">
-                <div class="col">
-                  <h4>Sample</h4>
-                  <p>sample</p>
-                </div>
+          <div class="row pt-4">
+            <div class="col d-flex jc-sb ai-c">
+
+              <div class="lk-filters--order-type option-set"
+                   data-filter-group="order-type">
+                <a data-filter-value=".active"
+                   class="hover-ef selected">Активные заказы</a>
+                <a data-filter-value=".done"
+                   class="hover-ef">Выполнено</a>
+                <a data-filter-value=".canceled"
+                   class="hover-ef">Отмененные</a>
+                <a data-filter-value=""
+                   class="hover-ef">Все</a>
               </div>
-              <div class="row pt-2">
 
-                <div class="col-12 col-md-4">
-                  sample
-                </div>
+              <div class="lk-filters--order-search">
+                <input type="text"
+                       class="lk-filters--order-search-input"
+                       placeholder="Поиск" />
+              </div>
+
+              <div class="lk-filters--order-sort sort-set"
+                   data-filter-group="order-sort">
+
+                <a class="hover-ef selected"
+                   data-sort-value="from_new">дате, сначала новые</a>
+                <a class="hover-ef"
+                   data-sort-value="from_old">дате, сначала старые</a>
 
               </div>
 
             </div>
           </div>
 
-          <div class="row pt-5">
+          <div class="row pt-4">
             <div class="col">
-              <div class="text-right">
-                <button class="lk-btn">Сохранить</button>
+
+              <div class="lk-orders-content">
+
+                <div data-date="20200227" data-status="52" class="lk-orders--item in active new">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Осталось <b>7 дней</b></pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>Принять заявку</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-date="20200226" data-status="51" class="lk-orders--item in active accepted">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Осталось <b>6 дней</b></pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>Загрузить видео</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-date="20200226" data-status="50" class="lk-orders--item in active accepted warning">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Осталось <b>1 день</b></pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>Загрузить видео</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-date="20200226" data-status="3" class="lk-orders--item in done">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Завершен 27.04.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <svg width="13"
+                             height="13"
+                             viewBox="0 0 13 13"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.486039 7.29228C0.754525 7.0238 1.18983 7.0238 1.45831 7.29228L4.37452 10.2085L10.6945 3.88848C10.963 3.61999 11.3983 3.61999 11.6668 3.88848C11.9353 4.15696 11.9353 4.59226 11.6668 4.86075L5.34703 11.1805C4.81027 11.7173 3.94012 11.7175 3.4031 11.1811L3.40285 11.1814L0.486039 8.26455C0.217553 7.99607 0.217553 7.56077 0.486039 7.29228Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Готово</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-date="20200226" data-status="2" class="lk-orders--item in canceled">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Отменен 27.04.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>ОТМЕНЕН</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-date="20200226" data-status="1" class="lk-orders--item in not-done">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>не выполнен заказ</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>Не выполнен</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
               </div>
+
+              <br>
+              <br>
+
+              <div class="lk-orders-content">
+
+                <div data-date="20200226" class="lk-orders--item out new open">
+                  <div class="lk-orders--item-header">
+                    <div class="lk-orders--item-avatar">
+                      <img src="./img/user-3.jpg">
+                    </div>
+                    <div class="lk-orders--item-info">
+                      <div>
+                        <h5>Поздравление</h5>
+                      </div>
+                      <div>
+                        <pre>ID: 22556741  26.02.2020</pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-for">
+                      <div>
+                        Для: <b>Дмитрий Васильевич Пантюхин</b>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-date">
+                      <div>
+                        <pre>Осталось <b>7 дней</b></pre>
+                      </div>
+                    </div>
+                    <div class="lk-orders--item-status">
+                      <div class="lk-orders--item-status-box">
+                        <span>Принять заявку</span>
+                      </div>
+                    </div>
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="lk-orders--item-content">
+                    <div class="container">
+
+                      <div class="row">
+                        <div class="col">
+                          123
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-lg-none d-flex jc-c">
+                    <button class="lk-orders--item--arrow"
+                            title="Открыть/Закрыть Заказ">
+                      <svg viewBox="0 0 21 11"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10.5 9L20 1"
+                              stroke="currentColor"
+                              stroke-width="2" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
           </div>
 
