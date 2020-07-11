@@ -114,32 +114,56 @@ jQuery(document).ready(function ($) {
       : 0;
   });
 
-  $("body").on("click", ".lk-orders--item--arrow", function () {
-    $(this).parents(".lk-orders--item").toggleClass("open");
+  // Toggle dropdown menu on click of trigger element
+  $(".dropdown-toggle").click(function () {
+    $(".dropdown-menu").not($(this).next()).slideUp(166);
+    $(this).next(".dropdown-menu").slideToggle(166);
+  });
+  // Hide dropdown menu on click outside
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest(".dropdown").length) {
+      $(".dropdown-menu").slideUp(166);
+    }
+  });
+  $("body").on("click", ".lk-filters--order-sort > *", function () {
+    $(this).parent().prev().find("b").html($(this).text());
   });
 
   // !! !!
-  var $container = $(".lk-orders-content"); // the container with all the elements to filter inside
+  var inOut = ".in";
+  var $container = $(".lk-orders-items"); // the container with all the elements to filter inside
   var filters = {}; //should be outside the scope of the filtering function
-  var filtersStr = "";
-  var sortDirection = false;
-  var sortValue = $(".lk-filters--order-sort .selected").attr("data-sort-value");
+  var filtersStr = $(".lk-filters--order-type .selected").attr("data-filter-value") + inOut;
   var sortParam = {
+    index: function (itemElem) {
+      return $(itemElem).index();
+    },
     from_new: function (itemElem) {
-      return parseFloat($(itemElem).attr("data-date") + $(itemElem).attr("data-status"));
+      return parseFloat($(itemElem).attr("data-date"));
     },
     from_old: function (itemElem) {
-      return parseFloat($(itemElem).attr("data-date") + $(itemElem).attr("data-status"));
+      return parseFloat($(itemElem).attr("data-date"));
     },
   };
+  var sortValue = $(".lk-filters--order-sort .selected").attr("data-sort-value");
+  var sortDirection = { index: true, from_new: false, from_old: true };
+  var qsRegex;
 
   /* --- read the documentation on isotope.metafizzy.co for more options --- */
   var $grid = $container.isotope({
     layoutMode: "fitRows",
     itemSelector: ".lk-orders--item", // the elements to filter
+    filter: function () {
+      var $this = $(this);
+      var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+      var filterResult = filtersStr ? $this.is(filtersStr) : true;
+      return searchResult && filterResult;
+    },
     getSortData: sortParam,
     sortBy: sortValue,
     sortAscending: sortDirection,
+    transitionDuration: 366,
+    stagger: 33,
   });
 
   // save some classes for later usage
@@ -183,9 +207,14 @@ jQuery(document).ready(function ($) {
       $(this).addClass(activeClass);
       $defaults.addClass(activeClass);
     }
-    filtersStr = comboFilter;
+    filtersStr = comboFilter + inOut;
     $grid.isotope({
-      filter: comboFilter,
+      filter: function () {
+        var $this = $(this);
+        var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+        var filterResult = filtersStr ? $this.is(filtersStr) : true;
+        return searchResult && filterResult;
+      },
       getSortData: sortParam,
       sortBy: sortValue,
       sortAscending: sortDirection,
@@ -194,25 +223,97 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
   });
 
+  $("body").on("click", ".lk-orders--item--arrow", function () {
+    $(this).parents(".lk-orders--item").toggleClass("open");
+    $(this)
+      .parents(".lk-orders--item")
+      .find(".lk-orders--item-content")
+      .slideToggle({
+        duration: "fast",
+        step: function () {
+          $grid.isotope({ transitionDuration: 0, stagger: 0 });
+        },
+        done: function () {
+          $grid.isotope({ transitionDuration: 366, stagger: 33 });
+        },
+      });
+  });
+  // use value of search field to filter
+  var $quicksearch = $(".lk-filters--order-search-input").keyup(
+    debounce(function () {
+      qsRegex = new RegExp($quicksearch.val(), "gi");
+      if ($(this).val()) {
+        $(this).parent().addClass("has-val");
+      } else {
+        $(this).parent().removeClass("has-val");
+      }
+      $grid.isotope({
+        filter: function () {
+          var $this = $(this);
+          var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+          var filterResult = filtersStr ? $this.is(filtersStr) : true;
+          return searchResult && filterResult;
+        },
+      });
+    }),
+  );
+  $("body").on("click", ".lk-filters--order-search-loop", function () {
+    $(this).parent().find("input").focus();
+  });
+  $("body").on("click", ".lk-filters--order-search-times", function () {
+    $(this).parent().find("input").val("");
+    $(this).parent().removeClass("has-val");
+    qsRegex = new RegExp($quicksearch.val(), "gi");
+    $grid.isotope({
+      filter: function () {
+        var $this = $(this);
+        var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+        var filterResult = filtersStr ? $this.is(filtersStr) : true;
+        return searchResult && filterResult;
+      },
+    });
+  });
+  // debounce so filtering doesn't happen every millisecond
+  function debounce(fn, threshold) {
+    var timeout;
+    threshold = threshold || 100;
+    return function debounced() {
+      clearTimeout(timeout);
+      var args = arguments;
+      var _this = this;
+      function delayed() {
+        fn.apply(_this, args);
+      }
+      timeout = setTimeout(delayed, threshold);
+    };
+  }
+
   // sort functions
   $(".sort-set a").click(function (e) {
     $(".sort-set a").removeClass(activeClass);
     $(this).addClass(activeClass);
-    // $(".toggle-w-sort span").html($(this).text());
-    sortValue = $(this).attr("data-sort-value");
-    sortDirection = false;
-    if (sortValue == "from_old") sortDirection = true;
+    sortValue = [$(this).attr("data-sort-value"), "index"];
     $grid.isotope({
-      filter: filtersStr,
-      getSortData: sortParam,
       sortBy: sortValue,
-      sortAscending: sortDirection,
     });
     lazyImgUpdate(300);
-    // $(".lk-filters--order-sort").toggleClass("active");
-    // $(".toggle-w-sort").toggleClass("active");
     e.preventDefault();
   });
+
+  function lkFilterOrderInOut() {
+    let old = inOut;
+    $("#lk-filters--order-in-out").prop("checked") ? (inOut = ".out") : (inOut = ".in");
+    filtersStr = filtersStr.replace(old, "") + inOut;
+    $grid.isotope({
+      filter: function () {
+        var $this = $(this);
+        var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+        var filterResult = filtersStr ? $this.is(filtersStr) : true;
+        return searchResult && filterResult;
+      },
+    });
+  }
+  $("body").on("change", "#lk-filters--order-in-out", lkFilterOrderInOut);
 
   function lazyImgUpdate(t) {
     setTimeout(function () {
@@ -296,7 +397,6 @@ function getComboFilter(filters) {
   // pass the entire array of filters to the function
   var i = 0; // set counter variable as zero
   var comboFilters = []; // make a new array to save the string of filters
-
   for (var prop in filters) {
     // loop through all the properties in the filter array passed to the function
     var filterGroup = filters[prop]; // define variable
@@ -322,7 +422,6 @@ function getComboFilter(filters) {
     }
     i++; // increment
   }
-
   var comboFilter = comboFilters.join(", ");
   return comboFilter;
 }

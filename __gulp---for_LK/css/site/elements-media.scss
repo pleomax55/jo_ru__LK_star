@@ -43,6 +43,9 @@
     max-width: 100%;
     max-height: calc(20px * 6);
   }
+  .lk-filters--order-search-input {
+    width: 100%;
+  }
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
@@ -57,9 +60,14 @@
 }
 
 // ? Custom
-@media (max-width: 425px) {
+@media (max-width: 424px) {
 }
-@media (max-width: 375px) {
+@media (max-width: 374px) {
+  .lk-filters--order-sort--dropdown {
+    .dropdown-toggle b {
+      display: block;
+    }
+  }
 }
 @media (max-width: 359px) {
 }
